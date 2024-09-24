@@ -1,0 +1,109 @@
+### KUllanıcı Oluşturma
+POST http://localhost:3000/users/create
+Content-Type: application/json
+
+{
+  "userName": "t1212asd3c",
+  "lastName": "asdasd12",
+  "email": "mas12311@gmail.com",
+  "password": "123123"
+}
+
+### Kullanıcı Girişi
+GET http://localhost:4343/users/login
+Content-Type: application/json
+
+{
+  "Email": "sc12@gmail.com",
+  "Password": "12"
+}
+
+#--------------------------------------------#
+
+
+### Doküman Ekleme
+POST http://localhost:4343/document/create
+Content-Type: application/json
+
+{
+  "Title": "Essential",
+  "Content": "Grammar book for English learners",
+  "FileType": "pdf",
+  "FileSize": 14,
+  "UploaderID": 3002,
+  "FileURL": "/Users/sametbuyukevli/Downloads/Essential Grammar in Use 4th Edition by R. Murphy.pdf"
+}
+
+
+
+
+### Doküman Listelemesi
+GET http://localhost:4343/document/list
+Content-Type: application/json
+
+### Seçilen Dokümanı listeleme
+GET http://localhost:4343/document/detail/24
+Accept: : application/json
+
+
+### Doküman Güncelleme
+POST http://localhost:4343/document/update/21
+Content-Type: application/json
+
+{
+  "Title": "Project Plan (değiştirdim)",
+  "Content": "Detailed project plan for Q3",
+  "FileType": "xldasdas",
+  "FileSize": 1024000,
+  "UploaderID": 1,
+  "FileURL": "değiştirildi"
+}
+
+### Doküman Silme
+POST http://localhost:4343/document/delete/23
+Content-Type: application/json
+
+#--------------------------------------------#
+
+
+### Kategori Oluşturma
+POST http://localhost:4343/category/create
+Content-Type: application/json
+
+{
+  "CategoryName": "SON12 TEST"
+}
+
+### Kategori Güncelleme
+POST http://localhost:4343/category/update/5
+Content-Type: application/json
+
+{
+  "CategoryName": "TEST (değiştirildi)"
+}
+
+### Kategori Silme
+POST http://localhost:4343/category/delete/1003
+Content-Type: application/json
+
+#--------------------------------------------#
+
+### Doküman Kategori Ekleme
+POST http://localhost:4343/docCategory/addCategory/21/5
+Content-Type: application/json
+
+### Doküman Kategorileri Getirme
+GET http://localhost:4343/docCategory/getDocCategories/21
+Content-Type: application/json
+
+### Doküman Kategori Silme
+POST http://localhost:4343/docCategory/deleteCategory/21/2
+Content-Type: application/json
+
+### Doküman Kategori Güncelleme
+# POST http://localhost:4343/docCategory/updateCategory/21/3
+# Content-Type: application/json
+
+
+GET http://localhost:4343/tags/detail/5070
+Content-Type: application/json
